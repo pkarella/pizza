@@ -8,22 +8,47 @@
     <title>Pizza Delivery</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <h1>Pizza Delivery</h1>
       <div class="row">
         <div class="col-md-8">
           <div class="jumbotron">
           <form id="formone">
             <div class="form-group">
+            <select class="form-control" id="name">
+            <h1>Topping</h1>
+              <option value="one">Peter</option>
+              <option value="two">Paul</option>
+              <option value="three">Mary</option>
+             </select>
+            <div class="form-group">
             <select class="form-control" id="topping">
             <h1>Topping</h1>
-              <option>Sausage</option>
-              <option>Medium</option>
-              <option>Large</option>
+              <option value="sausage">Sausage</option>
+              <option value="mushroom">Mushroom</option>
+              <option value="garlic">Garlic</option>
              </select>
-
-
-           <button type="submit" class="btn">Submit</button>
+             <div class="form-group">
+             <select class="form-control" id="sauce">
+             <h1>Topping</h1>
+               <option value="marinara">Marinara</option>
+               <option value="meat">Meat</option>
+               <option value="oliveoil">OliveOil</option>
+              </select>
+              <div class="form-group">
+              <select class="form-control" id="crust">
+              <h1>Topping</h1>
+                <option value="thin">Thin</option>
+                <option value="thick">Thick</option>
+               </select>
+               <div class="form-group">
+               <select class="form-control" id="size">
+               <h1>Topping</h1>
+                 <option value="small">Small</option>
+                 <option value="medium">Medium</option>
+                 <option value="large">Large</option>
+                </select>
+                <button type="submit" class="btn">Submit</button>
           </form>
         </div>
       </div>
