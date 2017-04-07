@@ -1,7 +1,7 @@
 //B.L.
 
 var price =0;
-var Pizza = function (topping) {
+var Pizza = function (name,topping, sauce, size) {
   this.topping = topping;
 }
 
