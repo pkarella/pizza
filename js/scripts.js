@@ -29,18 +29,22 @@ return ("Thankyou for your order "+ this.name +" Enjoy!!");
 
 Pizza.prototype.cost = function(){
 
-for(var i =0; i<this.topping.length; i++){
-  if (this.topping[i]==="sausage" && this.topping[i]==="mushroom" && this.topping[i]==="garlic"){
-   this.price += 15;
+// for(var i =0; i<this.topping.length; i++){console.log(this.topping[i]);
+  // if (this.topping[i]==="sausage" && this.topping[i]==="mushroom" && this.topping[i]==="garlic"){
+
+  if (this.topping.includes("sausage") && this.topping.includes("mushroom") && this.topping.includes("garlic")){
+     this.price += 15;
+     return this.price;
    }
 
- if (this.topping[i]==="mushroom"){
- this.price += 4;
-} if(this.topping[i]==="sausage"){
- this.price += 2;
-}
-return this.price;
-}
+
+//  else if (this.topping[i]==="mushroom"){
+//  this.price += 4;
+// } else if (this.topping[i]==="sausage"){
+//  this.price += 2;
+// }
+// return this.price;
+// }
 }
 
 
@@ -57,14 +61,14 @@ $(document).ready(function() {
     var resultName = $("#name").val();
     $("input:checkbox[name=topping]:checked").each(function(){
     toppingArray.push($(this).val());
-    });
+  }); console.log(toppingArray);
     var resultSauce = $("#sauce").val();
     var resultCrust = $("#crust").val();
     var resultSize = $("#size").val();
 
 
 var newPizza = new Pizza (resultName,toppingArray,resultSauce, resultCrust,resultSize);
-
+console.log(newPizza);
 
 
     $("p#outputOne").text("Your Total Will Be " + "$" + newPizza.cost(toppingArray));
