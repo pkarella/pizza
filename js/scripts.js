@@ -29,24 +29,23 @@ return ("Thankyou for your order "+ this.name +" Enjoy!!");
 
 Pizza.prototype.cost = function(){
 
-// for(var i =0; i<this.topping.length; i++){console.log(this.topping[i]);
-  // if (this.topping[i]==="sausage" && this.topping[i]==="mushroom" && this.topping[i]==="garlic"){
-
-  if (this.topping.includes("sausage") && this.topping.includes("mushroom") && this.topping.includes("garlic")){
-     this.price += 15;
+  if ((this.topping>=5 && this.sauce ==="meat" && this.crust === "thick" && this.size === "large")||(this.topping>=5 && this.sauce ==="oliveoil" && this.crust === "thick" && this.size === "large")) {
+     this.price += 6;
      return this.price;
+   } else if (this.topping===4 && this.sauce ==="marinara" && this.crust === "thin" && this.size === "small"){
+      this.price += 5;
+      return this.price;
+    } else if (this.topping===3 && this.sauce ==="marinara" && this.crust === "thick" && this.size === "small")||(this.topping===3 && this.sauce ==="meat" && this.crust === "thick" && this.size === "small"){
+       this.price += 4;
+       return this.price;
+    }else if (this.topping<=2  && this.sauce ==="marinara" && this.crust === "thin" && this.size === "small"){
+   this.price += 3;
+   return this.price;
    }
 
 
-//  else if (this.topping[i]==="mushroom"){
-//  this.price += 4;
-// } else if (this.topping[i]==="sausage"){
-//  this.price += 2;
-// }
-// return this.price;
-// }
-}
 
+}
 
 
 
@@ -61,18 +60,20 @@ $(document).ready(function() {
     var resultName = $("#name").val();
     $("input:checkbox[name=topping]:checked").each(function(){
     toppingArray.push($(this).val());
-  }); console.log(toppingArray);
+
+    });
     var resultSauce = $("#sauce").val();
     var resultCrust = $("#crust").val();
     var resultSize = $("#size").val();
+    var finalTopping= toppingArray.length;
 
-
-var newPizza = new Pizza (resultName,toppingArray,resultSauce, resultCrust,resultSize);
+var newPizza = new Pizza (resultName,finalTopping,resultSauce, resultCrust,resultSize);
 console.log(newPizza);
 
 
     $("p#outputOne").text("Your Total Will Be " + "$" + newPizza.cost(toppingArray));
     $("p#outputTwo").text(newPizza.greeting());
+
 
 
     $("#buttontwo").click(function(){
@@ -83,5 +84,6 @@ console.log(newPizza);
     //  $("#sauce").val('');
     //  $("#crust").val('');
     // $("#size").val('');
+
   });
 });
