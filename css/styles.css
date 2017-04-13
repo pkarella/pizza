@@ -6,6 +6,10 @@ h1{
    text-shadow: 4px 4px 6px #000000;
 }
 
+#output{
+  display: none;
+}
+
 p{
   font-family: fantasy;
   text-align: center;
