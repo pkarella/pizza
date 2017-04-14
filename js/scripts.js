@@ -1,62 +1,48 @@
 //B.L.
 function Pizza(name,topping,sauce,crust,size){
-this.name= name;
-this.topping = topping;
-this.sauce = sauce;
-this.crust = crust;
-this.size = size;
-this.price = 0;
+  this.name= name;
+  this.topping = topping;
+  this.sauce = sauce;
+  this.crust = crust;
+  this.size = size;
+  this.price = 0;
 }
 
 Pizza.prototype.greeting = function(){
-return ("Thankyou for your order "+ this.name +" Enjoy!!");
+  return ("Thankyou for your order "+ this.name +" Enjoy!!");
 }
 
-
-
-
 Pizza.prototype.cost = function(){
-
-      if(this.sauce=== "marinara"){
+  if(this.sauce=== "marinara"){
     this.price += 1;
   } else if(this.sauce=== "meat"){
     this.price += 2;
   } else if(this.sauce=== "oliveoil"){
     this.price += 1;
   }
-    if(this.crust=== "thin"){
+  if(this.crust=== "thin"){
     this.price += 1;
   } else if(this.crust=== "thick"){
     this.price += 2;
   }
-    if(this.size=== "small"){
-  this.price += 5;
+  if(this.size=== "small"){
+    this.price += 5;
   } else if(this.size=== "medium"){
-  this.price += 7;
+    this.price += 7;
   } else if(this.size=== "large"){
-  this.price += 9;
+    this.price += 9;
   }
-
-    if(this.topping=== 6){
+  if(this.topping=== 6){
     this.price += 4;
-  }
-  else if(this.topping === 4 ){
+  } else if(this.topping === 4 ){
     this.price +=3;
-  }
-  else if(this.topping === 3){
+  } else if(this.topping === 3){
     this.price +=2;
-  }
-  else if(this.topping<=2){
+  } else if(this.topping<=2){
     this.price +=1;
   }
-
-  return this.price;
+    return this.price;
 }
-
-
-
-
-
 
 
 //U.I.
@@ -76,8 +62,6 @@ $(document).ready(function() {
     var finalPizzaCost= toppingArray.length;
 
     var newPizza = new Pizza (resultName,finalPizzaCost,resultSauce, resultCrust,resultSize);
-
-
 
     $("#output").show();
     $("#formone").hide();

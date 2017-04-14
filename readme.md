@@ -4,22 +4,32 @@
 
 #### By _**Peter Karellas**_
 
-#### Contributers
-_Peter Karellas_
-
 ## Description
 
 _A Basic Pizza Order Delivery Form. You can choose your toppings and size and receive
 the total amount_
+_Checkout site here https://pkarella.github.io/pizza
 
 ## Setup/Installation Requirements
 
-*_Calculate cost for small pizza based on wether its	Small,Medium,or Large Pizza._
+*_Enter name to get a personalized Thankyou after choices are made_
+  *_INPUT: Enter name in text field_  
+  *_OUTPUT: "Thankyou for your order "Peter" enjoy"_
+*_Calculate cost for small pizza based on wether its Small,Medium,or Large Pizza._
+  *_-INPUT: Check small,medium,or large._
+  *_OUTPUT: price_
 *_Calculate cost for pizza based on thickness of crust._
+  *_INPUT: Check thin,thick._
+  *_OUTPUT: price_
 *_Calculate cost for Pizza  in regards to the amount of toppings_
+  *_INPUT: Check any toppings._
+  *_OUTPUT: price_
 *_Calculate cost for Pizza with a certain sauce_
+  *_INPUT: Check any toppings._
+  *_OUTPUT: price_
 
-## Known Bugs
+
+##Known Bugs
 
 _N/A_
 
